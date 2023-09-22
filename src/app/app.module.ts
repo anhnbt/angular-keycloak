@@ -9,9 +9,9 @@ function initializeKeycloak(keycloak: KeycloakService) {
   return () =>
     keycloak.init({
       config: {
-        realm: 'apim',
+        realm: 'spring-boot-keycloak',
         url: 'http://keycloak.etech.com.vn:8180',
-        clientId: 'apim-client'
+        clientId: 'login-app'
       },
       initOptions: {
         onLoad: 'check-sso',
