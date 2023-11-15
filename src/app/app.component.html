@@ -28,3 +28,18 @@
     </tr>
   </table>
 </ng-container>
+<nav>
+  <ul>
+    <li><a routerLink="/dashboard" routerLinkActive="active" ariaCurrentWhenActive="page">Dashboard</a></li>
+    <li>
+      <a routerLink="/first-component" routerLinkActive="active" ariaCurrentWhenActive="page">First Component</a>
+      <ul>
+        <li><a routerLink="/first-component/child-a" routerLinkActive="active" ariaCurrentWhenActive="page">ChildA</a></li>
+        <li><a routerLink="/first-component/child-b" routerLinkActive="active" ariaCurrentWhenActive="page">ChildB</a></li>
+      </ul>
+    </li>
+    <li><a routerLink="/second-component" routerLinkActive="active" ariaCurrentWhenActive="page">Second Component</a></li>
+    <li><a routerLink="/heroes" routerLinkActive="active" ariaCurrentWhenActive="page">Heroes</a></li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
