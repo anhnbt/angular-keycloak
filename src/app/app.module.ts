@@ -19,9 +19,9 @@ function initializeKeycloak(keycloak: KeycloakService) {
   return () =>
     keycloak.init({
       config: {
-        realm: 'spring-boot-keycloak',
-        url: 'http://localhost:8080',
-        clientId: 'login-app'
+        realm: 'thanhtra',
+        url: 'http://lgsp-xttt.thanhtra.gov.vn:8080',
+        clientId: 'thanhtra-angular'
       },
       initOptions: {
         onLoad: 'check-sso',
@@ -49,12 +49,12 @@ function initializeKeycloak(keycloak: KeycloakService) {
     KeycloakAngularModule
   ],
   providers: [
-    // {
-    //   provide: APP_INITIALIZER,
-    //   useFactory: initializeKeycloak,
-    //   multi: true,
-    //   deps: [KeycloakService]
-    // }
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeKeycloak,
+      multi: true,
+      deps: [KeycloakService]
+    },
     {provide: APP_BASE_HREF, useValue: '/myapp'}
   ],
   bootstrap: [AppComponent]
